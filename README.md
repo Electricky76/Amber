@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Amber Morrill Events — website
 
-## Getting Started
+This folder is the **draft site** for [ambermorrillevents.com](https://ambermorrillevents.com).  
+Her **current live site on GoDaddy stays unchanged** until you point the domain at Vercel.
 
-First, run the development server:
+## Run it on your computer
+
+1. Install [Node.js](https://nodejs.org/) (LTS) if you don’t have it.
+2. Open a terminal in this `website` folder.
+3. Run:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open **http://localhost:3000** in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Put it online free (Vercel)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Push this project to **GitHub** (new repo is fine).
+2. Go to [vercel.com](https://vercel.com), sign in, **Add New Project**, import that repo.
+3. Root directory: `website` (if the repo contains only this folder, pick the repo root).
+4. Deploy. You’ll get a link like `your-project.vercel.app` — **send that to Amber** for feedback.
 
-## Learn More
+Connecting **ambermorrillevents.com** happens later in Vercel + GoDaddy DNS—see Vercel’s “Domains” docs when you’re ready.
 
-To learn more about Next.js, take a look at the following resources:
+## Contact form → Amber’s email (optional)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Without setup, the form thanks people and asks them to email **amber@ambermorrillevents.com** directly.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To deliver submissions to her inbox automatically:
 
-## Deploy on Vercel
+1. Create a free account at [resend.com](https://resend.com).
+2. Create an API key.
+3. In Vercel: **Project → Settings → Environment Variables**, add:
+   - `RESEND_API_KEY` = your key  
+   - `CONTACT_TO_EMAIL` = `amber@ambermorrillevents.com`  
+   - `RESEND_FROM_EMAIL` = start with `Amber Morrill Site <onboarding@resend.dev>` (Resend’s test sender)  
+4. Redeploy.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Later you can verify her domain on Resend and use a “from” address on **@ambermorrillevents.com**.
