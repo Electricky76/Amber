@@ -6,11 +6,11 @@ SHIPPED IN public/fonts/
                            EULA copy: licenses/MyFonts-Monotype-EULA-order-7261873995946.html
 
 LOADED BY NEXT (Google Fonts, free — body + fallback display)
-  Cormorant Garamond — only used if Mantonico fails to load (variable --font-display).
-  Lora               — all body copy (substitute for Pro Condensed Times; not purchased).
+  Cormorant Garamond — fallback if Mantonico fails (CSS variable --font-cormorant).
+  Lora               — all body copy (variable --font-lora).
 
 NOT USED (optional later if Amber buys them)
   Pro Condensed Times New Roman — MyFonts
   Ecatherina Bold — MyFonts
 
-If you later add paid webfonts, add @font-face rules in app/globals.css and update --font-family-*.
+Use `font-headline` (Mantonico), `font-label` (Garet), and `font-prose` (Lora) in components — these map to Tailwind v4 `--font-*` theme keys.

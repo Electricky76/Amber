@@ -14,28 +14,28 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-black/25" />
       <div className="relative z-10 mx-auto flex min-h-[88vh] max-w-4xl flex-col justify-end px-6 pb-24 pt-32 text-center md:pb-28">
-        <p className="font-ui text-xs font-medium uppercase tracking-[0.35em] text-offwhite/90">
+        <p className="font-label text-xs font-medium uppercase tracking-[0.35em] text-offwhite/90">
           Texas &amp; beyond
         </p>
-        <h1 className="mt-4 font-display text-4xl font-extralight leading-[1.1] text-offwhite md:text-5xl lg:text-6xl">
+        <h1 className="mt-4 font-headline text-4xl font-extralight leading-[1.1] text-offwhite md:text-5xl lg:text-6xl">
           Events designed with intention.
           <br />
           Celebrations remembered for a lifetime.
         </h1>
-        <p className="mx-auto mt-6 max-w-2xl font-body text-lg leading-relaxed text-offwhite/90 md:text-xl">
+        <p className="mx-auto mt-6 max-w-2xl font-prose text-lg leading-relaxed text-offwhite/90 md:text-xl">
           Boutique planning that blends elegance, personality, and seamless
           execution—so you can be fully present in every moment.
         </p>
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Link
             href="#services"
-            className="font-ui inline-flex min-w-[200px] items-center justify-center border border-offwhite/40 bg-offwhite/10 px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.25em] text-offwhite backdrop-blur-sm transition hover:bg-offwhite hover:text-moss"
+            className="font-label inline-flex min-w-[200px] items-center justify-center border border-offwhite/40 bg-offwhite/10 px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.25em] text-offwhite backdrop-blur-sm transition hover:bg-offwhite hover:text-moss"
           >
             Explore services
           </Link>
           <Link
             href="#contact"
-            className="font-ui inline-flex min-w-[200px] items-center justify-center bg-blush px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.25em] text-ink transition hover:bg-offwhite"
+            className="font-label inline-flex min-w-[200px] items-center justify-center bg-blush px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.25em] text-ink transition hover:bg-offwhite"
           >
             Inquire
           </Link>

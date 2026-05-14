@@ -23,7 +23,7 @@ export function Header() {
             priority
           />
         </Link>
-        <nav className="hidden items-center gap-8 font-ui text-xs font-medium uppercase tracking-[0.2em] text-offwhite md:flex">
+        <nav className="hidden items-center gap-8 font-label text-xs font-medium uppercase tracking-[0.2em] text-offwhite md:flex">
           {nav.map((item) => (
             <Link
               key={item.href}
@@ -36,7 +36,7 @@ export function Header() {
         </nav>
         <Link
           href="#contact"
-          className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-offwhite underline-offset-4 transition hover:text-blush hover:underline md:hidden"
+          className="font-label text-xs font-semibold uppercase tracking-[0.2em] text-offwhite underline-offset-4 transition hover:text-blush hover:underline md:hidden"
         >
           Inquire
         </Link>

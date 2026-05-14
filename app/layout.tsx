@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Lora } from "next/font/google";
 import "./globals.css";
 
-const display = Cormorant_Garamond({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  variable: "--font-display",
+  variable: "--font-cormorant",
   weight: ["300", "400", "500"],
 });
 
-const body = Lora({
+const lora = Lora({
   subsets: ["latin"],
-  variable: "--font-body",
+  variable: "--font-lora",
   weight: ["400", "500"],
 });
 
@@ -41,9 +41,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${display.variable} ${body.variable} h-full antialiased`}
+      className={`${cormorant.variable} ${lora.variable} h-full antialiased`}
     >
-      <body className="min-h-full font-body">{children}</body>
+      <body className="font-prose min-h-full">{children}</body>
     </html>
   );
 }

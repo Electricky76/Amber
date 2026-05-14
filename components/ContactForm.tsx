@@ -69,13 +69,13 @@ export function ContactForm() {
     >
       <div className="mx-auto max-w-xl">
         <div className="text-center">
-          <p className="font-ui text-xs font-semibold uppercase tracking-[0.3em] text-moss">
+          <p className="font-label text-xs font-semibold uppercase tracking-[0.3em] text-moss">
             Contact
           </p>
-          <h2 className="mt-4 font-display text-3xl font-extralight text-ink md:text-4xl">
+          <h2 className="mt-4 font-headline text-3xl font-extralight text-ink md:text-4xl">
             Say hello—your celebration starts here
           </h2>
-          <p className="mt-5 font-body text-lg leading-relaxed text-ink/75">
+          <p className="mt-5 font-prose text-lg leading-relaxed text-ink/75">
             Share your email and phone number. Amber will reach out to hear
             more about your date, vision, and how we can help.
           </p>
@@ -85,7 +85,7 @@ export function ContactForm() {
           <div>
             <label
               htmlFor="email"
-              className="font-ui text-xs font-semibold uppercase tracking-[0.15em] text-moss"
+              className="font-label text-xs font-semibold uppercase tracking-[0.15em] text-moss"
             >
               Email <span className="text-wine">*</span>
             </label>
@@ -97,14 +97,14 @@ export function ContactForm() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="mt-2 w-full border border-olive/25 bg-egg px-4 py-3 font-body text-ink outline-none ring-moss/30 transition placeholder:text-ink/35 focus:border-moss focus:ring-2"
+              className="mt-2 w-full border border-olive/25 bg-egg px-4 py-3 font-prose text-ink outline-none ring-moss/30 transition placeholder:text-ink/35 focus:border-moss focus:ring-2"
               placeholder="you@email.com"
             />
           </div>
           <div>
             <label
               htmlFor="phone"
-              className="font-ui text-xs font-semibold uppercase tracking-[0.15em] text-moss"
+              className="font-label text-xs font-semibold uppercase tracking-[0.15em] text-moss"
             >
               Phone <span className="text-wine">*</span>
             </label>
@@ -116,14 +116,14 @@ export function ContactForm() {
               required
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              className="mt-2 w-full border border-olive/25 bg-egg px-4 py-3 font-body text-ink outline-none ring-moss/30 transition placeholder:text-ink/35 focus:border-moss focus:ring-2"
+              className="mt-2 w-full border border-olive/25 bg-egg px-4 py-3 font-prose text-ink outline-none ring-moss/30 transition placeholder:text-ink/35 focus:border-moss focus:ring-2"
               placeholder="Best number to reach you"
             />
           </div>
           <div>
             <label
               htmlFor="message"
-              className="font-ui text-xs font-semibold uppercase tracking-[0.15em] text-moss"
+              className="font-label text-xs font-semibold uppercase tracking-[0.15em] text-moss"
             >
               Tell us about your event (optional)
             </label>
@@ -133,14 +133,14 @@ export function ContactForm() {
               rows={4}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="mt-2 w-full resize-y border border-olive/25 bg-egg px-4 py-3 font-body text-ink outline-none ring-moss/30 transition placeholder:text-ink/35 focus:border-moss focus:ring-2"
+              className="mt-2 w-full resize-y border border-olive/25 bg-egg px-4 py-3 font-prose text-ink outline-none ring-moss/30 transition placeholder:text-ink/35 focus:border-moss focus:ring-2"
               placeholder="Wedding date, location, or how we can help…"
             />
           </div>
 
           {notice && (
             <p
-              className={`font-body text-sm leading-relaxed ${
+              className={`font-prose text-sm leading-relaxed ${
                 status === "error" ? "text-wine" : "text-moss"
               }`}
               role="status"
@@ -152,12 +152,12 @@ export function ContactForm() {
           <button
             type="submit"
             disabled={status === "submitting"}
-            className="font-ui w-full bg-moss px-6 py-4 text-xs font-semibold uppercase tracking-[0.28em] text-offwhite transition hover:bg-wine disabled:opacity-60"
+            className="font-label w-full bg-moss px-6 py-4 text-xs font-semibold uppercase tracking-[0.28em] text-offwhite transition hover:bg-wine disabled:opacity-60"
           >
             {status === "submitting" ? "Sending…" : "Request contact"}
           </button>
 
-          <p className="text-center font-body text-sm text-ink/65">
+          <p className="text-center font-prose text-sm text-ink/65">
             Prefer email?{" "}
             <a
               href={mailtoHref}

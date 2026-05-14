@@ -14,13 +14,13 @@ export function Gallery() {
     >
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="font-ui text-xs font-semibold uppercase tracking-[0.3em] text-moss">
+          <p className="font-label text-xs font-semibold uppercase tracking-[0.3em] text-moss">
             Gallery
           </p>
-          <h2 className="mt-4 font-display text-3xl font-extralight text-ink md:text-4xl">
+          <h2 className="mt-4 font-headline text-3xl font-extralight text-ink md:text-4xl">
             A glimpse of recent celebrations
           </h2>
-          <p className="mt-5 font-body text-lg leading-relaxed text-ink/75">
+          <p className="mt-5 font-prose text-lg leading-relaxed text-ink/75">
             Imagery from real events—each one crafted with intention. More
             galleries can be added as your portfolio grows.
           </p>

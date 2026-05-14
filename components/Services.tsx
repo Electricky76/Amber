@@ -27,13 +27,13 @@ export function Services() {
     >
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="font-ui text-xs font-semibold uppercase tracking-[0.3em] text-moss">
+          <p className="font-label text-xs font-semibold uppercase tracking-[0.3em] text-moss">
             Services
           </p>
-          <h2 className="mt-4 font-display text-3xl font-extralight text-ink md:text-4xl">
+          <h2 className="mt-4 font-headline text-3xl font-extralight text-ink md:text-4xl">
             Planning tailored to how you want to celebrate
           </h2>
-          <p className="mt-5 font-body text-lg leading-relaxed text-ink/75">
+          <p className="mt-5 font-prose text-lg leading-relaxed text-ink/75">
             Every relationship starts with a conversation—we&apos;ll match the
             level of support to your vision, timeline, and venue.
           </p>
@@ -44,16 +44,16 @@ export function Services() {
               key={tier.title}
               className="flex flex-col border border-olive/15 bg-egg/80 p-8 shadow-sm"
             >
-              <span className="font-ui text-[10px] font-semibold uppercase tracking-[0.25em] text-wine">
+              <span className="font-label text-[10px] font-semibold uppercase tracking-[0.25em] text-wine">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-4 font-display text-xl font-light text-ink">
+              <h3 className="mt-4 font-headline text-xl font-light text-ink">
                 {tier.title}
               </h3>
-              <p className="mt-1 font-ui text-xs font-medium uppercase tracking-[0.15em] text-olive">
+              <p className="mt-1 font-label text-xs font-medium uppercase tracking-[0.15em] text-olive">
                 {tier.subtitle}
               </p>
-              <p className="mt-5 flex-1 font-body text-[15px] leading-relaxed text-ink/80">
+              <p className="mt-5 flex-1 font-prose text-[15px] leading-relaxed text-ink/80">
                 {tier.description}
               </p>
             </article>

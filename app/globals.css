@@ -8,7 +8,6 @@
   font-family: "Garet";
   src: url("/fonts/garet-variable.woff2") format("woff2");
   font-weight: 100 900;
-  font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
 }
@@ -40,14 +39,11 @@
   --color-blush: var(--blush);
   --color-wine: var(--wine);
   --color-ink: var(--ink);
-  /* Headlines: Mantonico → Cormorant (Next variable) → system serifs */
-  --font-family-display: "Mantonico", var(--font-display), ui-serif, Georgia,
+  /* Tailwind v4: --font-{name} creates the utility font-{name} */
+  --font-headline: "Mantonico", var(--font-cormorant), ui-serif, Georgia, serif;
+  --font-label: "Garet", ui-sans-serif, system-ui, sans-serif;
+  --font-prose: var(--font-lora), "Times New Roman", Times, ui-serif, Georgia,
     serif;
-  /* Nav, buttons, eyebrow labels */
-  --font-family-ui: "Garet", ui-sans-serif, system-ui, sans-serif;
-  /* Body: Lora (Next) — editorial substitute for unpaid Pro Condensed Times */
-  --font-family-body: var(--font-body), "Times New Roman", Times, ui-serif,
-    Georgia, serif;
 }
 
 html {
@@ -57,5 +53,6 @@ html {
 body {
   background-color: var(--egg);
   color: var(--ink);
-  font-family: var(--font-body);
+  font-family: var(--font-lora), "Times New Roman", Times, ui-serif, Georgia,
+    serif;
 }
