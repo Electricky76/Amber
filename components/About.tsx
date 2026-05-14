@@ -8,7 +8,7 @@ export function About() {
         <p className="font-ui text-xs font-semibold uppercase tracking-[0.3em] text-moss">
           About
         </p>
-        <h2 className="mt-4 font-display text-3xl font-medium text-ink md:text-4xl">
+        <h2 className="mt-4 font-display text-3xl font-extralight text-ink md:text-4xl">
           Your partner in every detail
         </h2>
         <p className="mt-8 font-body text-lg leading-relaxed text-ink/85">

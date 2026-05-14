@@ -13,7 +13,7 @@ export function InstagramCta() {
         <p className="font-ui text-xs font-semibold uppercase tracking-[0.3em] text-blush">
           Instagram
         </p>
-        <h2 className="mt-4 font-display text-3xl font-medium text-offwhite md:text-4xl">
+        <h2 className="mt-4 font-display text-3xl font-extralight text-offwhite md:text-4xl">
           Follow along for inspiration &amp; behind the scenes
         </h2>
         <p className="mt-6 font-body text-lg leading-relaxed text-offwhite/85">

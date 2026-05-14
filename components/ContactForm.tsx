@@ -72,7 +72,7 @@ export function ContactForm() {
           <p className="font-ui text-xs font-semibold uppercase tracking-[0.3em] text-moss">
             Contact
           </p>
-          <h2 className="mt-4 font-display text-3xl font-medium text-ink md:text-4xl">
+          <h2 className="mt-4 font-display text-3xl font-extralight text-ink md:text-4xl">
             Say hello—your celebration starts here
           </h2>
           <p className="mt-5 font-body text-lg leading-relaxed text-ink/75">

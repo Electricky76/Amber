@@ -40,3 +40,14 @@ To deliver submissions to her inbox automatically:
 4. Redeploy.
 
 Later you can verify her domain on Resend and use a “from” address on **@ambermorrillevents.com**.
+
+## Brand typography (fonts)
+
+**Shipped stack (no extra $67 fonts):**
+
+- **Mantonico Extra Light** — headlines (`font-display`), file `public/fonts/mantonico-extralight.otf` from your MyFonts order. EULA: `licenses/MyFonts-Monotype-EULA-order-7261873995946.html` — **confirm web / @font-face use is allowed**; if not, buy the webfont kit or use Cormorant fallback only.
+- **Garet** — nav, labels, buttons (`font-ui`), file `public/fonts/garet-variable.woff2`. Confirm Spacetype / designer licensing for commercial web use.
+- **Lora** (Google Fonts) — all body copy (`font-body`), substitute for **Pro Condensed Times** (not purchased).
+- **Cormorant Garamond** (Google Fonts) — **fallback only** if Mantonico does not load (`--font-display` variable).
+
+Details: `public/fonts/CURRENT-FONTS.txt`

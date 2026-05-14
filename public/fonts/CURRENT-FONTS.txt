@@ -1,0 +1,16 @@
+Typography stack for this site (no extra MyFonts purchases)
+
+SHIPPED IN public/fonts/
+  garet-variable.woff2     — Garet (UI / nav). From garet.spacetype.co — confirm license.
+  mantonico-extralight.otf — Mantonico Extra Light (headlines). From your MyFonts order.
+                           EULA copy: licenses/MyFonts-Monotype-EULA-order-7261873995946.html
+
+LOADED BY NEXT (Google Fonts, free — body + fallback display)
+  Cormorant Garamond — only used if Mantonico fails to load (variable --font-display).
+  Lora               — all body copy (substitute for Pro Condensed Times; not purchased).
+
+NOT USED (optional later if Amber buys them)
+  Pro Condensed Times New Roman — MyFonts
+  Ecatherina Bold — MyFonts
+
+If you later add paid webfonts, add @font-face rules in app/globals.css and update --font-family-*.

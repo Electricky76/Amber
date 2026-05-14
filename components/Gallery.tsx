@@ -17,7 +17,7 @@ export function Gallery() {
           <p className="font-ui text-xs font-semibold uppercase tracking-[0.3em] text-moss">
             Gallery
           </p>
-          <h2 className="mt-4 font-display text-3xl font-medium text-ink md:text-4xl">
+          <h2 className="mt-4 font-display text-3xl font-extralight text-ink md:text-4xl">
             A glimpse of recent celebrations
           </h2>
           <p className="mt-5 font-body text-lg leading-relaxed text-ink/75">

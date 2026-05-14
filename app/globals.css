@@ -1,5 +1,27 @@
 @import "tailwindcss";
 
+/* --- Brand fonts we own / host (no Pro Condensed Times, no Ecatherina) --- */
+
+/* Garet (UI / nav / labels) — variable WOFF2 from official specimen.
+   Confirm commercial web use with Spacetype / designer. */
+@font-face {
+  font-family: "Garet";
+  src: url("/fonts/garet-variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Mantonico Extra Light — MyFonts order (.otf). Confirm EULA allows @font-face on the web. */
+@font-face {
+  font-family: "Mantonico";
+  src: url("/fonts/mantonico-extralight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --egg: #f5ebe4;
   --olive: #8c8774;
@@ -18,9 +40,14 @@
   --color-blush: var(--blush);
   --color-wine: var(--wine);
   --color-ink: var(--ink);
-  --font-family-display: var(--font-display), ui-serif, Georgia, serif;
-  --font-family-ui: var(--font-ui), ui-sans-serif, system-ui, sans-serif;
-  --font-family-body: var(--font-body), ui-serif, Georgia, serif;
+  /* Headlines: Mantonico → Cormorant (Next variable) → system serifs */
+  --font-family-display: "Mantonico", var(--font-display), ui-serif, Georgia,
+    serif;
+  /* Nav, buttons, eyebrow labels */
+  --font-family-ui: "Garet", ui-sans-serif, system-ui, sans-serif;
+  /* Body: Lora (Next) — editorial substitute for unpaid Pro Condensed Times */
+  --font-family-body: var(--font-body), "Times New Roman", Times, ui-serif,
+    Georgia, serif;
 }
 
 html {

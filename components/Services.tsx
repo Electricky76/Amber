@@ -30,7 +30,7 @@ export function Services() {
           <p className="font-ui text-xs font-semibold uppercase tracking-[0.3em] text-moss">
             Services
           </p>
-          <h2 className="mt-4 font-display text-3xl font-medium text-ink md:text-4xl">
+          <h2 className="mt-4 font-display text-3xl font-extralight text-ink md:text-4xl">
             Planning tailored to how you want to celebrate
           </h2>
           <p className="mt-5 font-body text-lg leading-relaxed text-ink/75">
@@ -47,7 +47,7 @@ export function Services() {
               <span className="font-ui text-[10px] font-semibold uppercase tracking-[0.25em] text-wine">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-4 font-display text-xl font-semibold text-ink">
+              <h3 className="mt-4 font-display text-xl font-light text-ink">
                 {tier.title}
               </h3>
               <p className="mt-1 font-ui text-xs font-medium uppercase tracking-[0.15em] text-olive">

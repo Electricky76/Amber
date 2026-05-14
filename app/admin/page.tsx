@@ -32,7 +32,7 @@ export default function AdminPlaceholderPage() {
         <p className="font-ui text-xs font-semibold uppercase tracking-[0.28em] text-moss">
           Draft · Not connected yet
         </p>
-        <h1 className="mt-4 font-display text-3xl font-medium text-ink md:text-4xl">
+        <h1 className="mt-4 font-display text-3xl font-extralight text-ink md:text-4xl">
           Hello, Amber — this is your future home base.
         </h1>
         <p className="mt-6 font-body text-lg leading-relaxed text-ink/80">
@@ -42,7 +42,7 @@ export default function AdminPlaceholderPage() {
         </p>
 
         <section className="mt-12 rounded-sm border border-olive/20 bg-offwhite p-8 shadow-sm">
-          <h2 className="font-display text-xl font-semibold text-ink">
+          <h2 className="font-display text-xl font-light text-ink">
             Planned for here
           </h2>
           <ul className="mt-6 space-y-4 font-body text-[15px] leading-relaxed text-ink/80">

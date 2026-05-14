@@ -17,7 +17,7 @@ export function Hero() {
         <p className="font-ui text-xs font-medium uppercase tracking-[0.35em] text-offwhite/90">
           Texas &amp; beyond
         </p>
-        <h1 className="mt-4 font-display text-4xl font-medium leading-[1.1] text-offwhite md:text-5xl lg:text-6xl">
+        <h1 className="mt-4 font-display text-4xl font-extralight leading-[1.1] text-offwhite md:text-5xl lg:text-6xl">
           Events designed with intention.
           <br />
           Celebrations remembered for a lifetime.
