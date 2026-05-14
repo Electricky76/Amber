@@ -1,0 +1,46 @@
+AMBER MORRILL EVENTS — WHICH FONT IS WHERE (plain English)
+============================================================
+
+HER BRANDING GUIDE SAYS (Typography.docx):
+  • MAIN font      = Mantonico Extra Light
+  • SECONDARY font = Garet
+  • BODY font      = Pro Condensed Times New Roman
+  • SIGNATURE font = Ecatherina Bold
+
+WHAT OUR WEBSITE USES RIGHT NOW
+--------------------------------
+
+1) BIG HEADLINES (hero title “Events designed with intention…”, section titles like “About”)
+   → We try to use: **MANTONICO EXTRA LIGHT** (her MAIN font).
+   → File on the site: public/fonts/mantonico-extralight.otf
+   → If the browser cannot use that file, it falls back to: **Cormorant Garamond** (Google — NOT in her guide; it is a “stand‑in” only for safety).
+
+2) SMALL LABELS / NAV / ALL CAPS BUTTONS (“TEXAS & BEYOND”, “EXPLORE SERVICES”, menu links)
+   → We use: **GARET** (her SECONDARY font).
+   → File on the site: public/fonts/garet-variable.woff2
+   → We did NOT replace Garet with Arial or something else. It is still Garet.
+
+   About money: The guide links to Font Squirrel for Garet as a free download. We are
+   using the real Garet design (variable WOFF2 from the official Garet site). Amber may
+   still want to double‑check the license for *commercial* use on a client website — that
+   is “paperwork / peace of mind,” not “you must pay or we remove Garet.”
+
+3) PARAGRAPH BODY TEXT (the longer sentence under the hero, About copy, form helper text)
+   → We use: **LORA** from Google Fonts.
+   → This is a **SUPPLEMENT** because she has not purchased **Pro Condensed Times** yet.
+   → When she buys Pro Condensed Times and gives us the web font file, we can swap Lora out.
+
+4) SIGNATURE / SCRIPT (Ecatherina) for normal paragraphs
+   → We are **NOT** using Ecatherina in text blocks yet — she has not purchased it.
+   → Her **logo** on the site is still an **image** (PNG), so the logo can look exactly
+   like the brand even without the Ecatherina web font file.
+
+WHERE ON THE HERO (so you can point at the screen)
+---------------------------------------------------
+  • “Texas & beyond” (small line above the big title)     → **Garet**
+  • “Events designed with intention…” (big title)         → **Mantonico** (fallback: Cormorant)
+  • “Boutique planning that blends…” (paragraph under it) → **Lora** (supplement for Body)
+  • “Explore services” / “Inquire” buttons                → **Garet**
+
+If anything here does not match what you see in the browser “Computed” font list, say
+which line and we’ll debug that exact element.
