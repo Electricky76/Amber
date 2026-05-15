@@ -8,9 +8,9 @@ Prefer a web-sized export (~2–4 MB) for speed.
 
 GALLERY (albums)
 ----------------
-Albums live in `data/gallery-albums.ts`. Each album = one square tile; add
-`{ src, alt }` entries per event or vibe. Arrows only cycle within that tile.
-Drop new JPEGs/WEBPs into `public/images/` and reference them by path.
+Albums: `data/gallery-albums.ts`. Wedding JPEGs live in `public/images/weddings/`
+(copied from `Assorted Wedding Photos` with URL-safe names). Each album = one
+carousel tile; arrows only cycle within that tile.
 
 SUBMARK (optional)
 --------------------

@@ -1,43 +1,59 @@
 /**
- * Each album = one tile in the gallery grid. Arrows cycle only within that tile.
- * Group by couple / event / vibe — add files under `public/images/` and list
- * them here (same image can appear in multiple albums if needed for demos).
+ * Each album = one carousel tile. Files live under `public/images/weddings/`.
  */
 export type GalleryImage = { src: string; alt: string };
 
 export type GalleryAlbum = {
   id: string;
-  /** Shown under the tile */
   title: string;
   images: GalleryImage[];
 };
 
 export const galleryAlbums: GalleryAlbum[] = [
   {
-    id: "outdoor-ceremony",
-    title: "Outdoor ceremony & vows",
+    id: "ralston",
+    title: "Ralston wedding",
     images: [
-      { src: "/images/gallery-01.jpg", alt: "Wedding ceremony in garden setting" },
-      { src: "/images/gallery-02.jpg", alt: "Celebration florals and tablescape" },
-      { src: "/images/gallery-03.jpg", alt: "Romantic wedding moment" },
+      { src: "/images/weddings/ralston-128.jpg", alt: "Ralston wedding celebration" },
+      { src: "/images/weddings/ralston-236.jpg", alt: "Ralston wedding celebration" },
+      { src: "/images/weddings/ralston-380.jpg", alt: "Ralston wedding celebration" },
+      { src: "/images/weddings/ralston-506.jpg", alt: "Ralston wedding celebration" },
+      { src: "/images/weddings/ralston-516.jpg", alt: "Ralston wedding celebration" },
+      { src: "/images/weddings/ralston-639.jpg", alt: "Ralston wedding celebration" },
+      { src: "/images/weddings/ralston-937.jpg", alt: "Ralston wedding celebration" },
+      { src: "/images/weddings/ralston-966.jpg", alt: "Ralston wedding celebration" },
     ],
   },
   {
-    id: "reception-details",
-    title: "Reception & design details",
+    id: "j-and-n",
+    title: "J & N",
     images: [
-      { src: "/images/gallery-02.jpg", alt: "Reception tablescape and florals" },
-      { src: "/images/gallery-03.jpg", alt: "Evening celebration detail" },
-      { src: "/images/gallery-01.jpg", alt: "Venue and guest experience" },
+      {
+        src: "/images/weddings/jn-bparty-11.jpg",
+        alt: "J & N bachelor party — Under the Sun Photography",
+      },
+      {
+        src: "/images/weddings/jn-romantics-47.jpg",
+        alt: "J & N romantics — Under the Sun Photography",
+      },
+      {
+        src: "/images/weddings/jn-romantics-77.jpg",
+        alt: "J & N romantics — Under the Sun Photography",
+      },
     ],
   },
   {
-    id: "portraits-moments",
-    title: "Portraits & candid moments",
+    id: "more-celebrations",
+    title: "More celebrations",
     images: [
-      { src: "/images/gallery-03.jpg", alt: "Intimate couple portrait" },
-      { src: "/images/gallery-01.jpg", alt: "Wedding party and architecture" },
-      { src: "/images/gallery-02.jpg", alt: "Floral installation detail" },
+      { src: "/images/weddings/ant-kyle-123.jpg", alt: "Ant & Kyle wedding" },
+      { src: "/images/weddings/ant-kyle-125.jpg", alt: "Ant & Kyle wedding" },
+      { src: "/images/weddings/misc-15236-16.jpg", alt: "Wedding celebration" },
+      { src: "/images/weddings/misc-1J1A0258.jpg", alt: "Wedding celebration" },
+      { src: "/images/weddings/misc-1J1A9850.jpg", alt: "Wedding celebration" },
+      { src: "/images/weddings/misc-6I1A4824.jpg", alt: "Wedding celebration" },
+      { src: "/images/weddings/misc-6I1A5640.jpg", alt: "Wedding celebration" },
+      { src: "/images/weddings/misc-image001.jpg", alt: "Event detail" },
     ],
   },
 ];
