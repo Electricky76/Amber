@@ -4,7 +4,8 @@ import Link from "next/link";
 /**
  * Hero: portrait photo uses object-contain on a full-height frame so the full
  * figure reads (side “pillar” bars in standout-2 when the viewport is wide).
- * Logo + Texas & beyond high; boutique line + CTA low on the image.
+ * Logo + Texas & beyond sit **left on md+** so center frame (face) stays
+ * clear; mobile stays centered. Softer scrim + radial “window” on desktop.
  */
 export function Hero() {
   return (
@@ -20,22 +21,23 @@ export function Hero() {
         />
         {/* Light touch so text reads without flattening the portrait */}
         <div
-          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/45 via-black/15 to-black/65"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/25 via-black/10 to-black/60 md:bg-[radial-gradient(ellipse_55%_45%_at_50%_22%,transparent_0%,transparent_42%,rgba(0,0,0,0.2)_100%),linear-gradient(to_bottom,rgba(0,0,0,0.22),transparent_35%,rgba(0,0,0,0.55))]"
           aria-hidden
         />
 
         <div className="relative z-10 flex min-h-svh flex-col px-6 pb-10 pt-24 text-center text-offwhite md:px-10 md:pb-14 md:pt-28">
-          <div className="flex shrink-0 flex-col items-center">
+          {/* Desktop: park type on the left so the center of the frame (her face) stays clear */}
+          <div className="flex shrink-0 flex-col items-center md:max-w-[min(38vw,22rem)] md:items-start md:self-start md:text-left lg:max-w-[min(34vw,24rem)] lg:pl-2">
             <h1 id="hero-heading" className="sr-only">
               Amber Morrill Event Planning — Texas and beyond
             </h1>
-            <Link href="/" className="block shrink-0">
+            <Link href="/" className="block shrink-0 md:mx-0">
               <Image
                 src="/logo-stacked.png"
                 alt="Amber Morrill Event Planning"
                 width={900}
                 height={520}
-                className="mx-auto h-auto w-[min(88vw,300px)] object-contain md:w-[340px]"
+                className="mx-auto h-auto w-[min(88vw,300px)] object-contain md:mx-0 md:w-[min(100%,280px)] lg:w-[300px]"
                 priority
               />
             </Link>
