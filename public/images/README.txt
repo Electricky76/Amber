@@ -1,11 +1,11 @@
 HERO (main landing photo)
 -------------------------
-Current file: from `Photos of Amber/1J1A9873 (1) (1).jpg` (copied as hero.jpg).
-Path must stay: hero.jpg
-  → website/public/images/hero.jpg
+File: `amber-hero-1J1A9873.jpg` (same image as
+`Photos of Amber/1J1A9873 (1) (1).jpg`). The path was changed from `hero.jpg`
+so browsers and CDNs do not keep showing a cached older file.
 
-This JPEG is large (~30 MB). For faster loads and deploys, consider exporting
-a web-sized copy (e.g. 2400px wide, ~80% quality) and replacing hero.jpg.
+If you replace the image, keep the filename or update `components/Hero.tsx`
+to match. Prefer a web-sized export (~2–4 MB) for speed.
 
 GALLERY
 -------

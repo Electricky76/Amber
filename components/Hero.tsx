@@ -3,8 +3,8 @@ import Link from "next/link";
 
 /**
  * Landing layout per client notes: brand band → full-width photo (clean, no
- * headline overlay) → description on egg. Replace `public/images/hero.jpg`
- * with her preferred lavender-dress / table hero when ready.
+ * headline overlay) → description on egg. Hero asset:
+ * `public/images/amber-hero-1J1A9873.jpg` (from Photos of Amber).
  */
 export function Hero() {
   return (
@@ -40,7 +40,7 @@ export function Hero() {
       {/* Main photo — no text overlay; optional Ecatherina headline deferred until licensed */}
       <div className="relative aspect-[4/5] w-full max-h-[min(92vh,960px)] md:aspect-[21/10] md:max-h-[min(85vh,820px)]">
         <Image
-          src="/images/hero.jpg"
+          src="/images/amber-hero-1J1A9873.jpg"
           alt="Amber Morrill — boutique event planning"
           fill
           priority
