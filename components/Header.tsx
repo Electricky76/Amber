@@ -40,8 +40,8 @@ export function Header() {
       <header
         className={`fixed left-0 right-0 top-0 z-[70] transition-colors duration-300 ${
           open || solidNav
-            ? "border-b border-white/10 bg-standout-2/95 backdrop-blur-sm"
-            : "border-b border-transparent bg-gradient-to-b from-black/55 via-black/15 to-transparent"
+            ? "border-b border-white/[0.06] bg-standout-2/95 backdrop-blur-sm"
+            : "border-b-0 bg-gradient-to-b from-standout-2/90 via-standout-2/40 to-transparent"
         }`}
       >
         <div className="relative mx-auto flex w-full max-w-6xl items-center px-5 py-4 text-offwhite">

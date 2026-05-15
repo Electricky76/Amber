@@ -1,9 +1,8 @@
 HERO (main landing photo)
 -------------------------
-File: `amber-hero-1J1A9873.jpg` — shown with **object-contain** inside the
-full-height hero so the **full portrait** is visible; wide screens get
-**side bars** in the brand brown (`standout-2`) instead of cropping her
-figure to a wide slice. Update path in `components/Hero.tsx` if you rename.
+Hero uses a **flow spacer** the same height as the fixed header so the portrait
+does not slide under the nav. Thin **egg** line under that strip. Centered
+type; bottom-weighted scrim.
 
 Prefer a web-sized export (~2–4 MB) for speed.
 
