@@ -43,7 +43,7 @@ function AlbumTile({ album }: { album: GalleryAlbum }) {
           alt={current.alt}
           fill
           className="object-cover transition duration-500 ease-out group-hover:scale-[1.02]"
-          sizes="(max-width: 768px) 50vw, 33vw"
+          sizes="(max-width: 768px) 50vw, 25vw"
         />
 
         {/* Soft bottom scrim for counter */}
@@ -104,15 +104,17 @@ export function Gallery() {
             A glimpse of recent celebrations
           </h2>
           <p className="mt-5 font-prose text-lg leading-relaxed text-ink/75">
-            Each column is its own set—often one celebration or one vibe. Use
-            the arrows on a photo to browse just that set, or swipe on your
-            phone. New shoots get added by dropping files into{" "}
-            <span className="font-medium text-ink/90">public/images</span> and
-            updating the album lists in the gallery data file in the project.
+            Four celebrations—each tile is its own album. Use the arrows (or
+            swipe on your phone) to browse within that wedding. Photo lists are
+            placeholders until each couple&apos;s gallery is finalized; update{" "}
+            <span className="font-medium text-ink/90">data/gallery-albums.ts</span>{" "}
+            when you add files under{" "}
+            <span className="font-medium text-ink/90">public/images/weddings</span>
+            .
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 md:gap-5">
+        <div className="mt-14 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4 md:gap-4">
           {galleryAlbums.map((album) => (
             <AlbumTile key={album.id} album={album} />
           ))}

@@ -8,9 +8,9 @@ Prefer a web-sized export (~2–4 MB) for speed.
 
 GALLERY (albums)
 ----------------
-Albums: `data/gallery-albums.ts`. Wedding JPEGs live in `public/images/weddings/`
-(copied from `Assorted Wedding Photos` with URL-safe names). Each album = one
-carousel tile; arrows only cycle within that tile.
+Four wedding columns in `data/gallery-albums.ts` (Nicole & Matt, Jenna & Nico,
+Gina & Danny, Antoinette & Kyle). File assignments are placeholders until
+confirmed. JPEGs live in `public/images/weddings/` (URL-safe names).
 
 SUBMARK (optional)
 --------------------
