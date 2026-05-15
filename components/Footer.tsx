@@ -8,8 +8,14 @@ export function Footer() {
       </p>
       <p className="mt-2 font-prose text-sm">
         <Link
+          href="tel:+12105085266"
+          className="block underline-offset-4 hover:text-blush hover:underline"
+        >
+          (210) 508-5266
+        </Link>
+        <Link
           href="mailto:amber@ambermorrillevents.com"
-          className="underline-offset-4 hover:text-blush hover:underline"
+          className="mt-1 block underline-offset-4 hover:text-blush hover:underline"
         >
           amber@ambermorrillevents.com
         </Link>

@@ -12,17 +12,17 @@ export function Hero() {
         className="object-cover object-[center_20%]"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-black/25" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
       <div className="relative z-10 mx-auto flex min-h-[88vh] max-w-4xl flex-col justify-end px-6 pb-24 pt-32 text-center md:pb-28">
-        <p className="font-label text-xs font-medium uppercase tracking-[0.35em] text-offwhite/90">
+        <p className="font-label text-xs font-medium uppercase tracking-[0.35em] text-offwhite">
           Texas &amp; beyond
         </p>
-        <h1 className="mt-4 font-headline text-4xl font-extralight leading-[1.1] text-offwhite md:text-5xl lg:text-6xl">
+        <h1 className="mt-4 text-balance font-headline text-4xl font-extralight leading-[1.08] tracking-tight text-white [text-shadow:0_2px_28px_rgba(0,0,0,0.35)] md:text-5xl lg:text-6xl">
           Events designed with intention.
           <br />
           Celebrations remembered for a lifetime.
         </h1>
-        <p className="mx-auto mt-6 max-w-2xl font-prose text-lg leading-relaxed text-offwhite/90 md:text-xl">
+        <p className="mx-auto mt-6 max-w-2xl font-prose text-lg leading-relaxed text-offwhite/92 md:text-xl">
           Boutique planning that blends elegance, personality, and seamless
           execution—so you can be fully present in every moment.
         </p>
