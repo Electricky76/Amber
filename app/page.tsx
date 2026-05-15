@@ -9,7 +9,7 @@ import { Services } from "@/components/Services";
 
 export default function Home() {
   return (
-    <div className="flex min-h-full flex-col">
+    <div className="relative flex min-h-full flex-col">
       <Header />
       <main className="flex-1">
         <Hero />

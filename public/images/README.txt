@@ -1,11 +1,10 @@
 HERO (main landing photo)
 -------------------------
-File: `amber-hero-1J1A9873.jpg` (same image as
-`Photos of Amber/1J1A9873 (1) (1).jpg`). The path was changed from `hero.jpg`
-so browsers and CDNs do not keep showing a cached older file.
+File: `amber-hero-1J1A9873.jpg` (from `Photos of Amber/1J1A9873 (1) (1).jpg`).
+Full-bleed hero with logo + headline + CTA on the image; description sits
+below on the egg band. Update path in `components/Hero.tsx` if you rename.
 
-If you replace the image, keep the filename or update `components/Hero.tsx`
-to match. Prefer a web-sized export (~2–4 MB) for speed.
+Prefer a web-sized export (~2–4 MB) for speed.
 
 GALLERY
 -------
@@ -15,6 +14,4 @@ Lightbox supports any count (e.g. nine for a 3×3 board).
 
 SUBMARK (optional)
 --------------------
-If you add a horizontal submark PNG for the brown intro band:
-  → website/public/logo-submark.png
-Ask dev to wire it under “Texas & beyond” in Hero.tsx.
+If you add `public/logo-submark.png`, we can swap the hero logo or header mark.
