@@ -1,8 +1,11 @@
 HERO (main landing photo)
 -------------------------
-Replace this file with Amber’s preferred hero (lavender dress / table scene).
+Current file: from `Photos of Amber/1J1A9873 (1) (1).jpg` (copied as hero.jpg).
 Path must stay: hero.jpg
   → website/public/images/hero.jpg
+
+This JPEG is large (~30 MB). For faster loads and deploys, consider exporting
+a web-sized copy (e.g. 2400px wide, ~80% quality) and replacing hero.jpg.
 
 GALLERY
 -------
