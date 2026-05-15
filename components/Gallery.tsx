@@ -57,7 +57,7 @@ function AlbumTile({ album }: { album: GalleryAlbum }) {
             <button
               type="button"
               onClick={prev}
-              className="font-label absolute left-1 top-1/2 z-10 flex h-11 w-9 -translate-y-1/2 items-center justify-center rounded-r-sm bg-ink/45 text-sm text-offwhite opacity-90 shadow-md backdrop-blur-[2px] transition hover:bg-ink/70 hover:opacity-100 focus-visible:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-moss md:left-2 md:h-12 md:w-10 md:opacity-0 md:group-hover:opacity-100 md:group-focus-within:opacity-100"
+              className="font-label absolute left-1 top-1/2 z-10 flex h-11 w-9 -translate-y-1/2 items-center justify-center rounded-r-sm bg-dark-mauve/85 text-sm text-offwhite opacity-95 shadow-md backdrop-blur-[2px] transition hover:bg-dark-mauve hover:opacity-100 focus-visible:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dark-mauve md:left-2 md:h-12 md:w-10 md:opacity-0 md:group-hover:opacity-100 md:group-focus-within:opacity-100"
               aria-label={`Previous photo, ${album.title}`}
             >
               ←
@@ -65,7 +65,7 @@ function AlbumTile({ album }: { album: GalleryAlbum }) {
             <button
               type="button"
               onClick={next}
-              className="font-label absolute right-1 top-1/2 z-10 flex h-11 w-9 -translate-y-1/2 items-center justify-center rounded-l-sm bg-ink/45 text-sm text-offwhite opacity-90 shadow-md backdrop-blur-[2px] transition hover:bg-ink/70 hover:opacity-100 focus-visible:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-moss md:right-2 md:h-12 md:w-10 md:opacity-0 md:group-hover:opacity-100 md:group-focus-within:opacity-100"
+              className="font-label absolute right-1 top-1/2 z-10 flex h-11 w-9 -translate-y-1/2 items-center justify-center rounded-l-sm bg-dark-mauve/85 text-sm text-offwhite opacity-95 shadow-md backdrop-blur-[2px] transition hover:bg-dark-mauve hover:opacity-100 focus-visible:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dark-mauve md:right-2 md:h-12 md:w-10 md:opacity-0 md:group-hover:opacity-100 md:group-focus-within:opacity-100"
               aria-label={`Next photo, ${album.title}`}
             >
               →
@@ -75,7 +75,7 @@ function AlbumTile({ album }: { album: GalleryAlbum }) {
 
         {n > 1 && (
           <p
-            className="font-label pointer-events-none absolute bottom-2 left-1/2 z-10 -translate-x-1/2 rounded-full bg-ink/55 px-2.5 py-1 text-[10px] uppercase tracking-[0.22em] text-offwhite/95"
+            className="font-label pointer-events-none absolute bottom-2 left-1/2 z-10 -translate-x-1/2 rounded-full bg-dark-mauve/80 px-2.5 py-1 text-[10px] uppercase tracking-[0.22em] text-offwhite/95"
             aria-live="polite"
           >
             {index + 1} / {n}

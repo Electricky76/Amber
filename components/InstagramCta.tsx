@@ -7,7 +7,7 @@ export function InstagramCta() {
   return (
     <section
       id="instagram"
-      className="scroll-mt-28 border-t border-olive/20 bg-moss px-6 py-20 md:py-24"
+      className="scroll-mt-28 border-t border-offwhite/10 bg-dark-mauve px-6 py-20 md:py-24"
     >
       <div className="mx-auto max-w-3xl text-center">
         <p className="font-label text-xs font-semibold uppercase tracking-[0.3em] text-blush">
@@ -24,7 +24,7 @@ export function InstagramCta() {
           href={IG_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-label mt-10 inline-flex items-center justify-center border border-offwhite/35 bg-transparent px-10 py-4 text-xs font-semibold uppercase tracking-[0.28em] text-offwhite transition hover:bg-offwhite hover:text-moss"
+          className="font-label mt-10 inline-flex items-center justify-center border border-offwhite/35 bg-transparent px-10 py-4 text-xs font-semibold uppercase tracking-[0.28em] text-offwhite transition hover:bg-offwhite hover:text-dark-mauve"
         >
           @{IG_HANDLE}
         </Link>

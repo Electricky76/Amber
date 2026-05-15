@@ -69,7 +69,7 @@ export function Hero() {
             </div>
             <Link
               href="#services"
-              className="font-label mt-5 inline-flex items-center justify-center rounded-full bg-wine px-10 py-3.5 text-xs font-semibold uppercase tracking-[0.28em] text-offwhite shadow-lg ring-1 ring-offwhite/20 transition hover:bg-blush hover:text-ink md:mt-6 md:px-12 md:py-4"
+              className="font-label mt-5 inline-flex items-center justify-center rounded-full bg-dark-mauve px-10 py-3.5 text-xs font-semibold uppercase tracking-[0.28em] text-offwhite shadow-lg ring-1 ring-offwhite/20 transition hover:bg-blush hover:text-ink md:mt-6 md:px-12 md:py-4"
             >
               Explore services
             </Link>

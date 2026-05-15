@@ -29,6 +29,8 @@
   --blush: #cdb4b2;
   --wine: #6d4f49;
   --ink: #1a1816;
+  /* Client “dark mauve” — same hue as Explore Services CTA (alias of wine) */
+  --dark-mauve: #6d4f49;
   /* Brand guide “stand out” / hero #2 — deep warm brown (Amber’s mockup top band) */
   --standout-2: #3d2f27;
 }
@@ -40,6 +42,7 @@
   --color-offwhite: var(--offwhite);
   --color-blush: var(--blush);
   --color-wine: var(--wine);
+  --color-dark-mauve: var(--dark-mauve);
   --color-standout-2: var(--standout-2);
   --color-ink: var(--ink);
   /* Tailwind v4: --font-{name} creates the utility font-{name} */
