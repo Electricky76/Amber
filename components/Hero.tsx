@@ -5,9 +5,9 @@ import Link from "next/link";
 const HEADER_STRIP = "h-16 shrink-0 md:h-[4.5rem]";
 
 /**
- * Hero: first strip clears fixed header + soft egg hairline; remaining height is
- * flex-1 (exactly one viewport minus strip). Portrait object-contain, centered
- * type, bottom-weighted scrim so the face stays bright.
+ * Hero: original horizontal logo (client preference). Top brand block uses a
+ * compact frosted panel so type reads on bright areas of the photo without
+ * covering the portrait. Bottom copy sits in a similar readable strip.
  */
 export function Hero() {
   return (
@@ -34,39 +34,42 @@ export function Hero() {
           aria-hidden
         />
 
-        <div className="relative z-10 flex min-h-0 flex-1 flex-col items-center px-6 pb-10 pt-8 text-center text-offwhite md:px-10 md:pb-14 md:pt-10">
-          <div className="flex max-w-md shrink-0 flex-col items-center">
+        <div className="relative z-10 flex min-h-0 flex-1 flex-col items-center px-5 pb-10 pt-4 text-center text-offwhite max-md:pt-3 md:px-10 md:pb-14 md:pt-8">
+          {/* Compact panel: high on small screens, reads on light sky / dress highlights */}
+          <div className="flex max-w-[min(92vw,20rem)] shrink-0 flex-col items-center rounded-2xl bg-ink/58 px-4 py-3 shadow-lg ring-1 ring-offwhite/15 backdrop-blur-md md:max-w-md md:px-5 md:py-4">
             <h1 id="hero-heading" className="sr-only">
-              Amber Morrill Event Planning — Texas and beyond
+              Amber Morrill Events — Texas and beyond
             </h1>
             <Link
               href="/"
-              className="block shrink-0 [filter:drop-shadow(0_2px_14px_rgba(0,0,0,0.45))]"
+              className="relative block h-9 w-[min(78vw,200px)] shrink-0 sm:h-10 sm:w-[220px] md:h-11 md:w-[240px]"
             >
               <Image
-                src="/logo-stacked.png"
-                alt="Amber Morrill Event Planning"
-                width={900}
-                height={520}
-                className="mx-auto h-auto w-[min(85vw,260px)] object-contain md:w-[min(100%,290px)]"
+                src="/logo.png"
+                alt="Amber Morrill Events"
+                fill
+                className="object-contain object-center"
+                sizes="240px"
                 priority
               />
             </Link>
-            <p className="mt-6 font-label text-xs font-medium uppercase tracking-[0.35em] text-offwhite/93 md:mt-7 md:text-[13px] md:tracking-[0.36em]">
+            <p className="mt-4 font-label text-[11px] font-semibold uppercase leading-snug tracking-[0.32em] text-offwhite [text-shadow:0_1px_2px_rgba(0,0,0,0.45)] max-[380px]:tracking-[0.26em] md:mt-5 md:text-xs md:tracking-[0.34em]">
               Texas &amp; beyond
             </p>
           </div>
 
-          <div className="min-h-[min(24vh,180px)] w-full flex-1 md:min-h-[min(28vh,240px)]" />
+          <div className="min-h-[min(22vh,160px)] w-full flex-1 md:min-h-[min(26vh,220px)]" />
 
-          <div className="mx-auto flex w-full max-w-xl shrink-0 flex-col items-center px-2 pb-2">
-            <p className="font-prose text-sm leading-relaxed text-offwhite/93 [text-shadow:0_1px_16px_rgba(0,0,0,0.5)] md:text-base md:leading-relaxed">
-              Boutique event planning that blends elegance, personality, and
-              seamless execution—so you can be fully present in every moment.
-            </p>
+          <div className="mx-auto flex w-full max-w-xl shrink-0 flex-col items-center px-1 pb-2">
+            <div className="w-full rounded-2xl bg-ink/55 px-4 py-3 shadow-lg ring-1 ring-offwhite/12 backdrop-blur-md md:px-5 md:py-4">
+              <p className="font-prose text-sm font-medium leading-relaxed text-offwhite [text-shadow:0_1px_3px_rgba(0,0,0,0.35)] md:text-base md:leading-relaxed">
+                Boutique event planning that blends elegance, personality, and
+                seamless execution—so you can be fully present in every moment.
+              </p>
+            </div>
             <Link
               href="#services"
-              className="font-label mt-6 inline-flex items-center justify-center rounded-full bg-wine px-11 py-3.5 text-xs font-semibold uppercase tracking-[0.28em] text-offwhite shadow-lg transition hover:bg-blush hover:text-ink md:mt-8 md:px-12 md:py-4"
+              className="font-label mt-5 inline-flex items-center justify-center rounded-full bg-wine px-10 py-3.5 text-xs font-semibold uppercase tracking-[0.28em] text-offwhite shadow-lg ring-1 ring-offwhite/20 transition hover:bg-blush hover:text-ink md:mt-6 md:px-12 md:py-4"
             >
               Explore services
             </Link>
