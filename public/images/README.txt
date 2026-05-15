@@ -1,8 +1,8 @@
 HERO (main landing photo)
 -------------------------
 File: `amber-hero-1J1A9873.jpg` (from `Photos of Amber/1J1A9873 (1) (1).jpg`).
-Full-bleed hero with logo + headline + CTA on the image; description sits
-below on the egg band. Update path in `components/Hero.tsx` if you rename.
+Full-bleed hero: logo + “Texas & beyond” high; boutique line + CTA low on
+the image. Update path in `components/Hero.tsx` if you rename.
 
 Prefer a web-sized export (~2–4 MB) for speed.
 

@@ -2,70 +2,65 @@ import Image from "next/image";
 import Link from "next/link";
 
 /**
- * Hero matches Amber’s inspiration board: full-bleed photo, centered logo +
- * uppercase headline + mauve CTA on the image; boutique copy below the photo
- * (“break… then the description”). Logos: hero uses `public/logo-stacked.png`
- * (Secondary Logo “Event Planning” stack); asset: `public/images/amber-hero-1J1A9873.jpg`.
+ * Hero: stacked logo + “Texas & beyond” high; flex spacer uses headroom for
+ * this crop. Boutique line + Explore services sit low on the image (inspo
+ * layout). Asset: `public/images/amber-hero-1J1A9873.jpg`, logo `logo-stacked.png`.
  */
 export function Hero() {
   return (
     <section className="w-full" aria-labelledby="hero-heading">
-      {/* Full-viewport hero image + overlays */}
       <div className="relative min-h-svh w-full">
         <Image
           src="/images/amber-hero-1J1A9873.jpg"
           alt="Amber Morrill — boutique event planning"
           fill
           priority
-          className="object-cover object-[center_22%]"
+          className="object-cover object-[center_28%]"
           sizes="100vw"
         />
         <div
-          className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/30 to-black/60"
+          className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/25 to-black/75"
           aria-hidden
         />
 
-        <div className="relative z-10 flex min-h-svh flex-col items-center justify-center px-6 pb-28 pt-28 text-center text-offwhite md:px-10 md:pb-32 md:pt-36">
-          <Link
-            href="/"
-            className="mb-10 block shrink-0 md:mb-12"
-          >
-            <Image
-              src="/logo-stacked.png"
-              alt="Amber Morrill Event Planning"
-              width={900}
-              height={520}
-              className="mx-auto h-auto w-[min(82vw,280px)] object-contain md:w-[320px]"
-              priority
-            />
-          </Link>
+        <div className="relative z-10 flex min-h-svh flex-col px-6 pb-10 pt-24 text-center text-offwhite md:px-10 md:pb-14 md:pt-28">
+          {/* Top: logo + kicker — leaves vertical room below for this photo crop */}
+          <div className="flex shrink-0 flex-col items-center">
+            <h1 id="hero-heading" className="sr-only">
+              Amber Morrill Event Planning — Texas and beyond
+            </h1>
+            <Link href="/" className="block shrink-0">
+              <Image
+                src="/logo-stacked.png"
+                alt="Amber Morrill Event Planning"
+                width={900}
+                height={520}
+                className="mx-auto h-auto w-[min(88vw,300px)] object-contain md:w-[340px]"
+                priority
+              />
+            </Link>
+            <p className="mt-7 font-label text-xs font-medium uppercase tracking-[0.35em] text-offwhite/92 md:mt-8 md:text-[13px] md:tracking-[0.38em]">
+              Texas &amp; beyond
+            </p>
+          </div>
 
-          <h1
-            id="hero-heading"
-            className="max-w-md font-label text-[11px] font-medium uppercase leading-[1.85] tracking-[0.32em] text-offwhite/95 md:max-w-2xl md:text-sm md:tracking-[0.28em]"
-          >
-            <span className="block">Events designed with intention.</span>
-            <span className="block">Celebrations remembered for a lifetime</span>
-            <span className="mt-3 block text-[10px] tracking-[0.38em] text-offwhite/85 md:text-xs md:tracking-[0.32em]">
-              in Texas &amp; beyond
-            </span>
-          </h1>
+          {/* Occupies middle “headroom” so footer cluster sits lower on the image */}
+          <div className="min-h-[min(28vh,220px)] w-full flex-1 md:min-h-[min(32vh,280px)]" />
 
-          <Link
-            href="#services"
-            className="font-label mt-12 inline-flex items-center justify-center rounded-full bg-wine px-12 py-4 text-xs font-semibold uppercase tracking-[0.28em] text-offwhite shadow-lg transition hover:bg-blush hover:text-ink md:mt-14"
-          >
-            Explore services
-          </Link>
+          {/* Low on photo: boutique line → button (matches inspo placement) */}
+          <div className="mx-auto flex w-full max-w-xl shrink-0 flex-col items-center px-2 pb-2">
+            <p className="font-prose text-sm leading-relaxed text-offwhite/92 [text-shadow:0_1px_18px_rgba(0,0,0,0.55)] md:text-base md:leading-relaxed">
+              Boutique event planning that blends elegance, personality, and
+              seamless execution—so you can be fully present in every moment.
+            </p>
+            <Link
+              href="#services"
+              className="font-label mt-7 inline-flex items-center justify-center rounded-full bg-wine px-12 py-4 text-xs font-semibold uppercase tracking-[0.28em] text-offwhite shadow-lg transition hover:bg-blush hover:text-ink md:mt-9"
+            >
+              Explore services
+            </Link>
+          </div>
         </div>
-      </div>
-
-      {/* Description after the photo (per her written layout) */}
-      <div className="border-t border-olive/15 bg-egg px-6 py-12 md:py-16">
-        <p className="mx-auto max-w-2xl text-center font-prose text-lg leading-relaxed text-ink/85 md:text-xl">
-          Boutique event planning that blends elegance, personality, and
-          seamless execution—so you can be fully present in every moment.
-        </p>
       </div>
     </section>
   );
