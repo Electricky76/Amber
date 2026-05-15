@@ -4,7 +4,8 @@ import Link from "next/link";
 /**
  * Hero matches Amber’s inspiration board: full-bleed photo, centered logo +
  * uppercase headline + mauve CTA on the image; boutique copy below the photo
- * (“break… then the description”). Asset: `public/images/amber-hero-1J1A9873.jpg`.
+ * (“break… then the description”). Logos: hero uses `public/logo-stacked.png`
+ * (Secondary Logo “Event Planning” stack); asset: `public/images/amber-hero-1J1A9873.jpg`.
  */
 export function Hero() {
   return (
@@ -27,14 +28,14 @@ export function Hero() {
         <div className="relative z-10 flex min-h-svh flex-col items-center justify-center px-6 pb-28 pt-28 text-center text-offwhite md:px-10 md:pb-32 md:pt-36">
           <Link
             href="/"
-            className="relative mb-10 block h-16 w-[min(100%,280px)] shrink-0 md:mb-12 md:h-[4.5rem] md:w-[320px]"
+            className="mb-10 block shrink-0 md:mb-12"
           >
             <Image
-              src="/logo.png"
-              alt="Amber Morrill Events"
-              fill
-              className="object-contain object-center"
-              sizes="320px"
+              src="/logo-stacked.png"
+              alt="Amber Morrill Event Planning"
+              width={900}
+              height={520}
+              className="mx-auto h-auto w-[min(82vw,280px)] object-contain md:w-[320px]"
               priority
             />
           </Link>
