@@ -1,45 +1,95 @@
 "use client";
 
+import type { GalleryAlbum } from "@/data/gallery-albums";
+import { galleryAlbums } from "@/data/gallery-albums";
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 
-/** Add as many entries as you like — drop files into `public/images/` and list them here. */
-const images = [
-  { src: "/images/gallery-01.jpg", alt: "Wedding reception detail" },
-  { src: "/images/gallery-02.jpg", alt: "Celebration florals and tablescape" },
-  { src: "/images/gallery-03.jpg", alt: "Romantic wedding moment" },
-];
+function AlbumTile({ album }: { album: GalleryAlbum }) {
+  const [index, setIndex] = useState(0);
+  const n = album.images.length;
+  const touchStartX = useRef<number | null>(null);
+
+  const prev = useCallback(() => {
+    setIndex((i) => (i - 1 + n) % n);
+  }, [n]);
+
+  const next = useCallback(() => {
+    setIndex((i) => (i + 1) % n);
+  }, [n]);
+
+  const current = album.images[index];
+
+  return (
+    <div className="flex flex-col">
+      <div
+        className="group relative aspect-square overflow-hidden rounded-sm bg-moss/10 ring-0"
+        onTouchStart={(e) => {
+          touchStartX.current = e.changedTouches[0]?.clientX ?? null;
+        }}
+        onTouchEnd={(e) => {
+          const start = touchStartX.current;
+          touchStartX.current = null;
+          if (start == null || n < 2) return;
+          const end = e.changedTouches[0]?.clientX ?? start;
+          const dx = end - start;
+          if (dx > 56) prev();
+          else if (dx < -56) next();
+        }}
+      >
+        <Image
+          key={`${album.id}-${index}`}
+          src={current.src}
+          alt={current.alt}
+          fill
+          className="object-cover transition duration-500 ease-out group-hover:scale-[1.02]"
+          sizes="(max-width: 768px) 50vw, 33vw"
+        />
+
+        {/* Soft bottom scrim for counter */}
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/50 to-transparent"
+          aria-hidden
+        />
+
+        {n > 1 && (
+          <>
+            <button
+              type="button"
+              onClick={prev}
+              className="font-label absolute left-1 top-1/2 z-10 flex h-11 w-9 -translate-y-1/2 items-center justify-center rounded-r-sm bg-ink/45 text-sm text-offwhite opacity-90 shadow-md backdrop-blur-[2px] transition hover:bg-ink/70 hover:opacity-100 focus-visible:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-moss md:left-2 md:h-12 md:w-10 md:opacity-0 md:group-hover:opacity-100 md:group-focus-within:opacity-100"
+              aria-label={`Previous photo, ${album.title}`}
+            >
+              ←
+            </button>
+            <button
+              type="button"
+              onClick={next}
+              className="font-label absolute right-1 top-1/2 z-10 flex h-11 w-9 -translate-y-1/2 items-center justify-center rounded-l-sm bg-ink/45 text-sm text-offwhite opacity-90 shadow-md backdrop-blur-[2px] transition hover:bg-ink/70 hover:opacity-100 focus-visible:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-moss md:right-2 md:h-12 md:w-10 md:opacity-0 md:group-hover:opacity-100 md:group-focus-within:opacity-100"
+              aria-label={`Next photo, ${album.title}`}
+            >
+              →
+            </button>
+          </>
+        )}
+
+        {n > 1 && (
+          <p
+            className="font-label pointer-events-none absolute bottom-2 left-1/2 z-10 -translate-x-1/2 rounded-full bg-ink/55 px-2.5 py-1 text-[10px] uppercase tracking-[0.22em] text-offwhite/95"
+            aria-live="polite"
+          >
+            {index + 1} / {n}
+          </p>
+        )}
+      </div>
+      <p className="mt-3 text-center font-label text-[11px] font-medium uppercase tracking-[0.2em] text-ink/65 md:text-xs md:tracking-[0.24em]">
+        {album.title}
+      </p>
+    </div>
+  );
+}
 
 export function Gallery() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const close = useCallback(() => setOpenIndex(null), []);
-  const goNext = useCallback(() => {
-    setOpenIndex((i) =>
-      i === null ? null : (i + 1) % images.length,
-    );
-  }, []);
-  const goPrev = useCallback(() => {
-    setOpenIndex((i) =>
-      i === null ? null : (i - 1 + images.length) % images.length,
-    );
-  }, []);
-
-  useEffect(() => {
-    if (openIndex === null) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") close();
-      if (e.key === "ArrowRight") goNext();
-      if (e.key === "ArrowLeft") goPrev();
-    };
-    document.body.style.overflow = "hidden";
-    window.addEventListener("keydown", onKey);
-    return () => {
-      document.body.style.overflow = "";
-      window.removeEventListener("keydown", onKey);
-    };
-  }, [openIndex, close, goNext, goPrev]);
-
   return (
     <section
       id="gallery"
@@ -54,93 +104,20 @@ export function Gallery() {
             A glimpse of recent celebrations
           </h2>
           <p className="mt-5 font-prose text-lg leading-relaxed text-ink/75">
-            Imagery from real events—each one crafted with intention. Click a
-            photo to enlarge; use on-screen arrows or your keyboard (← →), and
-            Escape to close. Add more files under{" "}
-            <span className="whitespace-nowrap font-medium text-ink/90">
-              public/images
-            </span>{" "}
-            and extend the list in the site code to fill a full grid (for
-            example nine images for a three-by-three board).
+            Each column is its own set—often one celebration or one vibe. Use
+            the arrows on a photo to browse just that set, or swipe on your
+            phone. New shoots get added by dropping files into{" "}
+            <span className="font-medium text-ink/90">public/images</span> and
+            updating the album lists in the gallery data file in the project.
           </p>
         </div>
-        <div className="mt-14 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 md:gap-4">
-          {images.map((img, index) => (
-            <button
-              key={img.src}
-              type="button"
-              onClick={() => setOpenIndex(index)}
-              className="group relative aspect-square cursor-zoom-in overflow-hidden rounded-sm bg-moss/10 text-left ring-0 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-moss"
-            >
-              <Image
-                src={img.src}
-                alt={img.alt}
-                fill
-                className="object-cover transition duration-500 group-hover:scale-[1.03]"
-                sizes="(max-width: 768px) 50vw, 33vw"
-              />
-              <span className="sr-only">Open image {index + 1} in gallery</span>
-            </button>
+
+        <div className="mt-14 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 md:gap-5">
+          {galleryAlbums.map((album) => (
+            <AlbumTile key={album.id} album={album} />
           ))}
         </div>
       </div>
-
-      {openIndex !== null && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-ink/90 p-4 md:p-8"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Enlarged gallery photo"
-          onClick={close}
-        >
-          <div
-            className="relative h-[min(88vh,920px)] w-full max-w-5xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <Image
-              src={images[openIndex].src}
-              alt={images[openIndex].alt}
-              fill
-              className="object-contain"
-              sizes="100vw"
-              priority
-            />
-
-            <button
-              type="button"
-              onClick={close}
-              className="font-label absolute left-2 top-2 z-20 rounded-sm bg-offwhite/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-offwhite backdrop-blur-sm transition hover:bg-offwhite hover:text-ink md:left-4 md:top-4"
-            >
-              Close
-            </button>
-
-            {images.length > 1 && (
-              <>
-                <button
-                  type="button"
-                  onClick={goPrev}
-                  className="font-label absolute left-1 top-1/2 z-20 -translate-y-1/2 rounded-sm bg-offwhite/10 px-3 py-4 text-xs font-semibold uppercase tracking-[0.15em] text-offwhite backdrop-blur-sm transition hover:bg-offwhite hover:text-ink md:left-4"
-                  aria-label="Previous image"
-                >
-                  ←
-                </button>
-                <button
-                  type="button"
-                  onClick={goNext}
-                  className="font-label absolute right-1 top-1/2 z-20 -translate-y-1/2 rounded-sm bg-offwhite/10 px-3 py-4 text-xs font-semibold uppercase tracking-[0.15em] text-offwhite backdrop-blur-sm transition hover:bg-offwhite hover:text-ink md:right-4"
-                  aria-label="Next image"
-                >
-                  →
-                </button>
-              </>
-            )}
-
-            <p className="font-label pointer-events-none absolute bottom-3 left-1/2 z-20 -translate-x-1/2 rounded-full bg-ink/60 px-4 py-1.5 text-[10px] uppercase tracking-[0.25em] text-offwhite/90">
-              {openIndex + 1} / {images.length}
-            </p>
-          </div>
-        </div>
-      )}
     </section>
   );
 }

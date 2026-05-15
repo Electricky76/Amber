@@ -6,11 +6,11 @@ type; bottom-weighted scrim.
 
 Prefer a web-sized export (~2–4 MB) for speed.
 
-GALLERY
--------
-Add gallery-04.jpg, gallery-05.jpg, … then edit components/Gallery.tsx
-and append { src: "/images/gallery-04.jpg", alt: "…" }, etc.
-Lightbox supports any count (e.g. nine for a 3×3 board).
+GALLERY (albums)
+----------------
+Albums live in `data/gallery-albums.ts`. Each album = one square tile; add
+`{ src, alt }` entries per event or vibe. Arrows only cycle within that tile.
+Drop new JPEGs/WEBPs into `public/images/` and reference them by path.
 
 SUBMARK (optional)
 --------------------
