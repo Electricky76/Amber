@@ -55,17 +55,22 @@ export function Gallery() {
           </h2>
           <p className="mt-5 font-prose text-lg leading-relaxed text-ink/75">
             Imagery from real events—each one crafted with intention. Click a
-            photo to open it larger; use the arrows or your keyboard (← →) to
-            move between images, Escape to close.
+            photo to enlarge; use on-screen arrows or your keyboard (← →), and
+            Escape to close. Add more files under{" "}
+            <span className="whitespace-nowrap font-medium text-ink/90">
+              public/images
+            </span>{" "}
+            and extend the list in the site code to fill a full grid (for
+            example nine images for a three-by-three board).
           </p>
         </div>
-        <div className="mt-14 grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-5">
+        <div className="mt-14 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 md:gap-4">
           {images.map((img, index) => (
             <button
               key={img.src}
               type="button"
               onClick={() => setOpenIndex(index)}
-              className="group relative aspect-[3/4] cursor-zoom-in overflow-hidden rounded-sm bg-moss/10 text-left ring-0 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-moss"
+              className="group relative aspect-square cursor-zoom-in overflow-hidden rounded-sm bg-moss/10 text-left ring-0 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-moss"
             >
               <Image
                 src={img.src}
