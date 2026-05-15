@@ -2,29 +2,29 @@ import Image from "next/image";
 import Link from "next/link";
 
 /**
- * Hero: stacked logo + “Texas & beyond” high; flex spacer uses headroom for
- * this crop. Boutique line + Explore services sit low on the image (inspo
- * layout). Asset: `public/images/amber-hero-1J1A9873.jpg`, logo `logo-stacked.png`.
+ * Hero: portrait photo uses object-contain on a full-height frame so the full
+ * figure reads (side “pillar” bars in standout-2 when the viewport is wide).
+ * Logo + Texas & beyond high; boutique line + CTA low on the image.
  */
 export function Hero() {
   return (
     <section className="w-full" aria-labelledby="hero-heading">
-      <div className="relative min-h-svh w-full">
+      <div className="relative min-h-svh w-full bg-standout-2">
         <Image
           src="/images/amber-hero-1J1A9873.jpg"
           alt="Amber Morrill — boutique event planning"
           fill
           priority
-          className="object-cover object-[center_28%]"
+          className="object-contain object-center"
           sizes="100vw"
         />
+        {/* Light touch so text reads without flattening the portrait */}
         <div
-          className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/25 to-black/75"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/45 via-black/15 to-black/65"
           aria-hidden
         />
 
         <div className="relative z-10 flex min-h-svh flex-col px-6 pb-10 pt-24 text-center text-offwhite md:px-10 md:pb-14 md:pt-28">
-          {/* Top: logo + kicker — leaves vertical room below for this photo crop */}
           <div className="flex shrink-0 flex-col items-center">
             <h1 id="hero-heading" className="sr-only">
               Amber Morrill Event Planning — Texas and beyond
@@ -44,10 +44,8 @@ export function Hero() {
             </p>
           </div>
 
-          {/* Occupies middle “headroom” so footer cluster sits lower on the image */}
-          <div className="min-h-[min(28vh,220px)] w-full flex-1 md:min-h-[min(32vh,280px)]" />
+          <div className="min-h-[min(30vh,240px)] w-full flex-1 md:min-h-[min(34vh,300px)]" />
 
-          {/* Low on photo: boutique line → button (matches inspo placement) */}
           <div className="mx-auto flex w-full max-w-xl shrink-0 flex-col items-center px-2 pb-2">
             <p className="font-prose text-sm leading-relaxed text-offwhite/92 [text-shadow:0_1px_18px_rgba(0,0,0,0.55)] md:text-base md:leading-relaxed">
               Boutique event planning that blends elegance, personality, and
