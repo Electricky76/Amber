@@ -1,27 +1,28 @@
-# Gallery folders (for Timothy)
+# Gallery photos — easy workflow (Timothy)
 
-When you organize **Assorted Wedding Photos** (or copy into the site), use **one folder per wedding**:
+You do **not** need to copy files into folders or edit code yourself.
 
-```
-Assorted Wedding Photos/
-  The Mitchells — Kelly Costello Photography/
-    photo-01.jpg
-    photo-02.jpg
-    … (8 images)
-  Another Couple — Photographer Name/
-    …
-```
+## What to do
 
-## Wire into the site
+1. Drop the photos into the Cursor chat (attach all 8, or however many you have).
+2. Say something plain, for example:
 
-1. Copy each folder’s images into `website/public/images/weddings/`  
-   (use simple filenames, e.g. `mitchells-01.jpg` … `mitchells-08.jpg`).
+   > Incoming — **The Mitchells**. Photographer: **Kelly Costello Photography**. These are the 8 gallery photos.
 
-2. Edit `website/data/gallery-albums.ts`:
-   - `title`: couple name (e.g. **The Mitchells**)
-   - `photographer`: credit line (e.g. **Kelly Costello Photography**)
-   - `images`: list all 8 `{ src, alt }` paths
+3. The agent will:
+   - Put the files in the right place on the site (`public/images/weddings/`)
+   - Name them in a simple, web-safe way
+   - Update the gallery carousel (couple name + photographer credit)
+   - Commit and push so Vercel updates
 
-3. Push / deploy — each album is one carousel tile on the homepage.
+## Optional (only if you want)
 
-The site shows the couple name in caps under the tile and the photographer in smaller normal case below it.
+You can still drop folders into **Assorted Wedding Photos** on your computer as your own backup — the site does not read that folder automatically. What matters is what gets added to the **website** project after you send photos in chat.
+
+## One line per wedding
+
+When you have the next set ready, same pattern:
+
+> Incoming — **[Couple names]**. Photographer: **[Name]**. Gallery photos attached.
+
+That’s it.
