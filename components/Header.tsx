@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -13,14 +14,6 @@ const nav = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
-  const [solidNav, setSolidNav] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setSolidNav(window.scrollY > 56);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -37,17 +30,11 @@ export function Header() {
 
   return (
     <>
-      <header
-        className={`fixed left-0 right-0 top-0 z-[70] transition-colors duration-300 ${
-          open || solidNav
-            ? "border-b border-white/[0.06] bg-standout-2/95 backdrop-blur-sm"
-            : "border-b-0 bg-gradient-to-b from-standout-2/90 via-standout-2/40 to-transparent"
-        }`}
-      >
-        <div className="relative mx-auto flex w-full max-w-6xl items-center px-5 py-4 text-offwhite">
+      <header className="fixed left-0 right-0 top-0 z-[70] border-b border-white/[0.08] bg-standout-2">
+        <div className="relative mx-auto flex h-16 w-full max-w-6xl items-center px-5 md:h-[4.5rem]">
           <button
             type="button"
-            className="z-10 shrink-0 rounded-sm p-2 transition hover:bg-offwhite/10 md:hidden"
+            className="z-10 shrink-0 rounded-sm p-2 text-offwhite transition hover:bg-offwhite/10 md:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
             onClick={() => setOpen((o) => !o)}
@@ -65,6 +52,20 @@ export function Header() {
               </span>
             )}
           </button>
+
+          <Link
+            href="/"
+            className="absolute left-1/2 top-1/2 h-9 w-[min(52vw,200px)] -translate-x-1/2 -translate-y-1/2 md:static md:h-10 md:w-[220px] md:shrink-0 md:translate-x-0 md:translate-y-0 lg:w-[240px]"
+          >
+            <Image
+              src="/logo.png"
+              alt="Amber Morrill Events"
+              fill
+              className="object-contain object-center"
+              sizes="240px"
+              priority
+            />
+          </Link>
 
           <nav
             className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 md:flex md:gap-8"
@@ -93,7 +94,7 @@ export function Header() {
       {open && (
         <div
           id="mobile-nav"
-          className="fixed inset-0 z-[60] flex flex-col bg-standout-2/98 px-8 pb-10 pt-28 md:hidden"
+          className="fixed inset-0 z-[60] flex flex-col bg-standout-2 px-8 pb-10 pt-28 md:hidden"
           role="dialog"
           aria-modal="true"
           aria-label="Site menu"

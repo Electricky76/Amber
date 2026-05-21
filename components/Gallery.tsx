@@ -103,18 +103,9 @@ export function Gallery() {
           <h2 className="mt-4 font-headline text-3xl font-extralight text-ink md:text-4xl">
             A glimpse of recent celebrations
           </h2>
-          <p className="mt-5 font-prose text-lg leading-relaxed text-ink/75">
-            Four celebrations—each tile is its own album. Use the arrows (or
-            swipe on your phone) to browse within that wedding. Photo lists are
-            placeholders until each couple&apos;s gallery is finalized; update{" "}
-            <span className="font-medium text-ink/90">data/gallery-albums.ts</span>{" "}
-            when you add files under{" "}
-            <span className="font-medium text-ink/90">public/images/weddings</span>
-            .
-          </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4 md:gap-4">
+        <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 md:mt-14 md:grid-cols-4 md:gap-4">
           {galleryAlbums.map((album) => (
             <AlbumTile key={album.id} album={album} />
           ))}
