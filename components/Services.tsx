@@ -41,7 +41,7 @@ export function Services() {
               <p className="mt-1 font-label text-xs font-medium uppercase tracking-[0.15em] text-olive">
                 {tier.subtitle}
               </p>
-              <p className="mt-5 flex-1 font-prose text-[15px] leading-relaxed text-ink/80">
+              <p className="mt-5 flex-1 font-label text-[15px] font-normal leading-relaxed tracking-normal text-ink/80">
                 {tier.description}
               </p>
             </article>

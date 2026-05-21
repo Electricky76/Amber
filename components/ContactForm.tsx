@@ -75,7 +75,7 @@ export function ContactForm() {
           <h2 className="mt-4 font-headline text-3xl font-extralight text-ink md:text-4xl">
             Say hello—your celebration starts here
           </h2>
-          <p className="mt-5 font-prose text-lg leading-relaxed text-ink/75">
+          <p className="mt-5 font-label text-lg font-normal leading-relaxed tracking-normal text-ink/75">
             Share your email and phone number. Amber will reach out to hear
             more about your date, vision, and how we can help.
           </p>
@@ -97,7 +97,7 @@ export function ContactForm() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="mt-2 w-full border border-olive/25 bg-egg px-4 py-3 font-prose text-ink outline-none ring-dark-mauve/20 transition placeholder:text-ink/35 focus:border-dark-mauve focus:ring-2"
+              className="mt-2 w-full border border-olive/25 bg-egg px-4 py-3 font-label font-normal tracking-normal text-ink outline-none ring-dark-mauve/20 transition placeholder:text-ink/35 focus:border-dark-mauve focus:ring-2"
               placeholder="you@email.com"
             />
           </div>
@@ -116,7 +116,7 @@ export function ContactForm() {
               required
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              className="mt-2 w-full border border-olive/25 bg-egg px-4 py-3 font-prose text-ink outline-none ring-dark-mauve/20 transition placeholder:text-ink/35 focus:border-dark-mauve focus:ring-2"
+              className="mt-2 w-full border border-olive/25 bg-egg px-4 py-3 font-label font-normal tracking-normal text-ink outline-none ring-dark-mauve/20 transition placeholder:text-ink/35 focus:border-dark-mauve focus:ring-2"
               placeholder="Best number to reach you"
             />
           </div>
@@ -133,14 +133,14 @@ export function ContactForm() {
               rows={4}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="mt-2 w-full resize-y border border-olive/25 bg-egg px-4 py-3 font-prose text-ink outline-none ring-dark-mauve/20 transition placeholder:text-ink/35 focus:border-dark-mauve focus:ring-2"
+              className="mt-2 w-full resize-y border border-olive/25 bg-egg px-4 py-3 font-label font-normal tracking-normal text-ink outline-none ring-dark-mauve/20 transition placeholder:text-ink/35 focus:border-dark-mauve focus:ring-2"
               placeholder="Wedding date, location, or how we can help…"
             />
           </div>
 
           {notice && (
             <p
-              className={`font-prose text-sm leading-relaxed ${
+              className={`font-label text-sm font-normal leading-relaxed tracking-normal ${
                 status === "error" ? "text-wine" : "text-dark-mauve"
               }`}
               role="status"
@@ -157,7 +157,7 @@ export function ContactForm() {
             {status === "submitting" ? "Sending…" : "Request contact"}
           </button>
 
-          <p className="text-center font-prose text-sm text-ink/65">
+          <p className="text-center font-label text-sm font-normal tracking-normal text-ink/65">
             Prefer email?{" "}
             <a
               href={mailtoHref}

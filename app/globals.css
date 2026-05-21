@@ -46,10 +46,10 @@
   --color-standout-2: var(--standout-2);
   --color-ink: var(--ink);
   /* Tailwind v4: --font-{name} creates the utility font-{name} */
-  --font-headline: "Mantonico", var(--font-cormorant), ui-serif, Georgia, serif;
+  --font-headline: "Mantonico", ui-serif, Georgia, serif;
   --font-label: "Garet", ui-sans-serif, system-ui, sans-serif;
-  --font-prose: var(--font-lora), "Times New Roman", Times, ui-serif, Georgia,
-    serif;
+  /* Body copy uses Garet until Pro Condensed Times is licensed */
+  --font-prose: "Garet", ui-sans-serif, system-ui, sans-serif;
 }
 
 html {
@@ -59,6 +59,5 @@ html {
 body {
   background-color: var(--egg);
   color: var(--ink);
-  font-family: var(--font-lora), "Times New Roman", Times, ui-serif, Georgia,
-    serif;
+  font-family: "Garet", ui-sans-serif, system-ui, sans-serif;
 }

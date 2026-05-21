@@ -16,7 +16,7 @@ export function InstagramCta() {
         <h2 className="mt-4 font-headline text-3xl font-extralight text-offwhite md:text-4xl">
           Follow along for inspiration &amp; behind the scenes
         </h2>
-        <p className="mt-6 font-prose text-lg leading-relaxed text-offwhite/85">
+        <p className="mt-6 font-label text-lg font-normal leading-relaxed tracking-normal text-offwhite/85">
           See recent work, vendor partnerships, and the energy we bring to
           every celebration.
         </p>

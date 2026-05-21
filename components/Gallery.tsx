@@ -82,9 +82,16 @@ function AlbumTile({ album }: { album: GalleryAlbum }) {
           </p>
         )}
       </div>
-      <p className="mt-3 text-center font-label text-[11px] font-medium uppercase tracking-[0.2em] text-ink/65 md:text-xs md:tracking-[0.24em]">
-        {album.title}
-      </p>
+      <div className="mt-3 text-center">
+        <p className="font-label text-[11px] font-medium uppercase tracking-[0.2em] text-ink/70 md:text-xs md:tracking-[0.24em]">
+          {album.title}
+        </p>
+        {album.photographer ? (
+          <p className="mt-1.5 font-label text-[10px] font-normal normal-case tracking-normal text-ink/55 md:text-[11px]">
+            {album.photographer}
+          </p>
+        ) : null}
+      </div>
     </div>
   );
 }
@@ -97,10 +104,7 @@ export function Gallery() {
     >
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="font-label text-xs font-semibold uppercase tracking-[0.3em] text-moss">
-            Gallery
-          </p>
-          <h2 className="mt-4 font-headline text-3xl font-extralight text-ink md:text-4xl">
+          <h2 className="font-headline text-3xl font-extralight text-ink md:text-4xl">
             A glimpse of recent celebrations
           </h2>
         </div>

@@ -6,11 +6,10 @@ SHIPPED IN public/fonts/
                            EULA copy: licenses/MyFonts-Monotype-EULA-order-7261873995946.html
 
 LOADED BY NEXT (Google Fonts, free — body + fallback display)
-  Cormorant Garamond — fallback if Mantonico fails (CSS variable --font-cormorant).
-  Lora               — all body copy (variable --font-lora).
+  (No Google supplement fonts — body uses Garet.)
 
 NOT USED (optional later if Amber buys them)
   Pro Condensed Times New Roman — MyFonts
   Ecatherina Bold — MyFonts
 
-Use `font-headline` (Mantonico), `font-label` (Garet), and `font-prose` (Lora) in components — these map to Tailwind v4 `--font-*` theme keys.
+Use `font-headline` (Mantonico) for display headings and `font-label` (Garet) for labels, body, and UI.

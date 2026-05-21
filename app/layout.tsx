@@ -1,18 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Lora } from "next/font/google";
 import "./globals.css";
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  variable: "--font-cormorant",
-  weight: ["300", "400", "500"],
-});
-
-const lora = Lora({
-  subsets: ["latin"],
-  variable: "--font-lora",
-  weight: ["400", "500"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ambermorrillevents.com"),
@@ -39,11 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${cormorant.variable} ${lora.variable} h-full antialiased`}
-    >
-      <body className="font-prose min-h-full">{children}</body>
+    <html lang="en" className="h-full antialiased">
+      <body className="min-h-full font-label font-normal">{children}</body>
     </html>
   );
 }

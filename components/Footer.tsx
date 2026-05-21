@@ -6,7 +6,7 @@ export function Footer() {
       <p className="font-headline text-lg font-extralight tracking-wide text-offwhite">
         Amber Morrill Events
       </p>
-      <p className="mt-2 font-prose text-sm">
+      <p className="mt-2 font-label text-sm font-normal tracking-normal">
         <Link
           href="tel:+12105085266"
           className="block underline-offset-4 hover:text-blush hover:underline"

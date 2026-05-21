@@ -28,7 +28,7 @@ export function Hero() {
         <div className="relative z-10 flex min-h-0 flex-1 flex-col items-center px-5 pb-10 pt-6 text-center text-offwhite md:px-10 md:pb-14 md:pt-8">
           <h1
             id="hero-heading"
-            className="font-headline shrink-0 text-lg font-extralight tracking-wide text-offwhite [text-shadow:0_2px_20px_rgba(0,0,0,0.55)] md:text-xl"
+            className="font-label shrink-0 text-xs font-semibold uppercase tracking-[0.34em] text-offwhite [text-shadow:0_2px_20px_rgba(0,0,0,0.55)] md:text-[13px] md:tracking-[0.36em]"
           >
             Texas &amp; beyond
           </h1>
@@ -36,7 +36,7 @@ export function Hero() {
           <div className="min-h-[min(24vh,180px)] w-full flex-1 md:min-h-[min(28vh,240px)]" />
 
           <div className="mx-auto flex w-full max-w-xl shrink-0 flex-col items-center px-2 pb-2">
-            <p className="font-prose text-sm font-medium leading-relaxed text-offwhite [text-shadow:0_2px_18px_rgba(0,0,0,0.6)] md:text-base md:leading-relaxed">
+            <p className="font-label text-sm font-normal leading-relaxed tracking-normal text-offwhite [text-shadow:0_2px_18px_rgba(0,0,0,0.6)] md:text-base">
               Boutique event planning that blends elegance, personality, and
               seamless execution—so you can be fully present in every moment.
             </p>

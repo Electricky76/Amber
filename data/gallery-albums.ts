@@ -1,15 +1,18 @@
 /**
- * Each album = one carousel tile. Files live under `public/images/weddings/`.
+ * Each album = one carousel tile. Photos live under `public/images/weddings/`.
  *
- * Placeholder groupings — Amber will confirm which files belong to which
- * couple. Antoinette & Kyle currently holds the ant-kyle files plus two misc
- * picks; Gina & Danny holds the remaining misc set.
+ * When you add folders (e.g. in Assorted Wedding Photos or under weddings/):
+ *   `The Mitchells — Kelly Costello Photography/` → 8 JPEGs inside
+ * Set `title` (couple), `photographer`, and list each file in `images`.
  */
 export type GalleryImage = { src: string; alt: string };
 
 export type GalleryAlbum = {
   id: string;
+  /** Couple / event name under the tile */
   title: string;
+  /** Credit line, e.g. "Kelly Costello Photography" */
+  photographer?: string;
   images: GalleryImage[];
 };
 
@@ -31,18 +34,19 @@ export const galleryAlbums: GalleryAlbum[] = [
   {
     id: "jenna-nico",
     title: "Jenna & Nico",
+    photographer: "Under the Sun Photography",
     images: [
       {
         src: "/images/weddings/jn-bparty-11.jpg",
-        alt: "Jenna & Nico — Under the Sun Photography",
+        alt: "Jenna & Nico celebration",
       },
       {
         src: "/images/weddings/jn-romantics-47.jpg",
-        alt: "Jenna & Nico — Under the Sun Photography",
+        alt: "Jenna & Nico celebration",
       },
       {
         src: "/images/weddings/jn-romantics-77.jpg",
-        alt: "Jenna & Nico — Under the Sun Photography",
+        alt: "Jenna & Nico celebration",
       },
     ],
   },
