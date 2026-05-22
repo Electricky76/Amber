@@ -36,13 +36,14 @@ export const galleryAlbums: GalleryAlbum[] = [
     })),
   },
   {
-    id: "jenna-nico",
-    title: "Jenna & Nico",
+    id: "buenos",
+    title: "The Buenos",
     photographer: "Under the Sun Photography",
+    /** Placeholder until Buenos photos are dropped in chat — then swap paths here */
     images: [
-      { src: "/images/weddings/jn-bparty-11.jpg", alt: "Jenna & Nico celebration" },
-      { src: "/images/weddings/jn-romantics-47.jpg", alt: "Jenna & Nico celebration" },
-      { src: "/images/weddings/jn-romantics-77.jpg", alt: "Jenna & Nico celebration" },
+      { src: "/images/weddings/jn-bparty-11.jpg", alt: "The Buenos celebration" },
+      { src: "/images/weddings/jn-romantics-47.jpg", alt: "The Buenos celebration" },
+      { src: "/images/weddings/jn-romantics-77.jpg", alt: "The Buenos celebration" },
     ],
   },
   {
