@@ -19,6 +19,9 @@ const ralstons = (n: number) =>
 const buenos = (n: number) =>
   `/images/weddings/buenos-${String(n).padStart(2, "0")}.png`;
 
+const munizes = (n: number) =>
+  `/images/weddings/munizes-${String(n).padStart(2, "0")}.png`;
+
 export const galleryAlbums: GalleryAlbum[] = [
   {
     id: "mitchells",
@@ -48,13 +51,12 @@ export const galleryAlbums: GalleryAlbum[] = [
     })),
   },
   {
-    id: "antoinette-kyle",
-    title: "Antoinette & Kyle",
-    images: [
-      { src: "/images/weddings/ant-kyle-123.jpg", alt: "Antoinette & Kyle celebration" },
-      { src: "/images/weddings/ant-kyle-125.jpg", alt: "Antoinette & Kyle celebration" },
-      { src: "/images/weddings/misc-15236-16.jpg", alt: "Antoinette & Kyle celebration" },
-      { src: "/images/weddings/misc-6I1A5640.jpg", alt: "Antoinette & Kyle celebration" },
-    ],
+    id: "munizes",
+    title: "The Munizes",
+    photographer: "Matthew Alvarado Co.",
+    images: Array.from({ length: 8 }, (_, i) => ({
+      src: munizes(i + 1),
+      alt: "The Munizes celebration",
+    })),
   },
 ];
