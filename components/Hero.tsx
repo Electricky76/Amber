@@ -17,7 +17,7 @@ export function Hero() {
           alt="Amber Morrill — boutique event planning"
           fill
           priority
-          className="object-contain object-[center_48%]"
+          className="object-cover object-[center_42%] md:object-contain md:object-[center_48%]"
           sizes="100vw"
         />
         <div
