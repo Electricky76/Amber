@@ -22,24 +22,32 @@ const buenos = (n: number) =>
 const munizes = (n: number) =>
   `/images/weddings/munizes-${String(n).padStart(2, "0")}.png`;
 
+/** Put Amber’s chosen “featured” slide first; rest keep original numbering order. */
+function albumImages(
+  src: (n: number) => string,
+  count: number,
+  featured: number,
+  alt: string
+): GalleryImage[] {
+  const order = [
+    featured,
+    ...Array.from({ length: count }, (_, i) => i + 1).filter((n) => n !== featured),
+  ];
+  return order.map((n) => ({ src: src(n), alt }));
+}
+
 export const galleryAlbums: GalleryAlbum[] = [
   {
     id: "mitchells",
     title: "The Mitchells",
     photographer: "Kelly Costello Photography",
-    images: Array.from({ length: 9 }, (_, i) => ({
-      src: mitchells(i + 1),
-      alt: "The Mitchells celebration",
-    })),
+    images: albumImages(mitchells, 9, 3, "The Mitchells celebration"),
   },
   {
     id: "ralstons",
     title: "The Ralstons",
     photographer: "Elizabeth Rey Photography",
-    images: Array.from({ length: 14 }, (_, i) => ({
-      src: ralstons(i + 1),
-      alt: "The Ralstons celebration",
-    })),
+    images: albumImages(ralstons, 14, 3, "The Ralstons celebration"),
   },
   {
     id: "buenos",
@@ -54,9 +62,6 @@ export const galleryAlbums: GalleryAlbum[] = [
     id: "munizes",
     title: "The Munizes",
     photographer: "Matthew Alvarado Co.",
-    images: Array.from({ length: 8 }, (_, i) => ({
-      src: munizes(i + 1),
-      alt: "The Munizes celebration",
-    })),
+    images: albumImages(munizes, 8, 7, "The Munizes celebration"),
   },
 ];
