@@ -16,6 +16,9 @@ const mitchells = (n: number) =>
 const ralstons = (n: number) =>
   `/images/weddings/ralstons-${String(n).padStart(2, "0")}.png`;
 
+const buenos = (n: number) =>
+  `/images/weddings/buenos-${String(n).padStart(2, "0")}.png`;
+
 export const galleryAlbums: GalleryAlbum[] = [
   {
     id: "mitchells",
@@ -39,12 +42,10 @@ export const galleryAlbums: GalleryAlbum[] = [
     id: "buenos",
     title: "The Buenos",
     photographer: "Under the Sun Photography",
-    /** Placeholder until Buenos photos are dropped in chat — then swap paths here */
-    images: [
-      { src: "/images/weddings/jn-bparty-11.jpg", alt: "The Buenos celebration" },
-      { src: "/images/weddings/jn-romantics-47.jpg", alt: "The Buenos celebration" },
-      { src: "/images/weddings/jn-romantics-77.jpg", alt: "The Buenos celebration" },
-    ],
+    images: Array.from({ length: 11 }, (_, i) => ({
+      src: buenos(i + 1),
+      alt: "The Buenos celebration",
+    })),
   },
   {
     id: "antoinette-kyle",
