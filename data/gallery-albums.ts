@@ -11,16 +11,16 @@ export type GalleryAlbum = {
 };
 
 const mitchells = (n: number) =>
-  `/images/weddings/nicole-matt-${String(n).padStart(2, "0")}.png`;
+  `/images/weddings/nicole-matt-${String(n).padStart(2, "0")}.jpg`;
 
 const ralstons = (n: number) =>
-  `/images/weddings/ralstons-${String(n).padStart(2, "0")}.png`;
+  `/images/weddings/ralstons-${String(n).padStart(2, "0")}.jpg`;
 
 const buenos = (n: number) =>
-  `/images/weddings/buenos-${String(n).padStart(2, "0")}.png`;
+  `/images/weddings/buenos-${String(n).padStart(2, "0")}.jpg`;
 
 const munizes = (n: number) =>
-  `/images/weddings/munizes-${String(n).padStart(2, "0")}.png`;
+  `/images/weddings/munizes-${String(n).padStart(2, "0")}.jpg`;
 
 /** Put Amber’s chosen “featured” slide first; rest keep original numbering order. */
 function albumImages(
