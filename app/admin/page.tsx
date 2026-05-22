@@ -35,7 +35,7 @@ export default function AdminPlaceholderPage() {
         <h1 className="mt-4 font-headline text-3xl font-extralight text-ink md:text-4xl">
           Hello, Amber — this is your future home base.
         </h1>
-        <p className="mt-6 font-prose text-lg leading-relaxed text-ink/80">
+        <p className="mt-6 font-label font-normal tracking-normal text-lg leading-relaxed text-ink/80">
           Right now this page is only a placeholder. Soon you&apos;ll be able to
           update galleries, swap photos, and get gentle prompts—without needing
           to touch code or design tools you don&apos;t use.
@@ -45,7 +45,7 @@ export default function AdminPlaceholderPage() {
           <h2 className="font-headline text-xl font-light text-ink">
             Planned for here
           </h2>
-          <ul className="mt-6 space-y-4 font-prose text-[15px] leading-relaxed text-ink/80">
+          <ul className="mt-6 space-y-4 font-label font-normal tracking-normal text-[15px] leading-relaxed text-ink/80">
             <li className="flex gap-3">
               <span className="font-label text-moss">—</span>
               <span>
@@ -71,7 +71,7 @@ export default function AdminPlaceholderPage() {
           </ul>
         </section>
 
-        <p className="mt-10 font-prose text-sm leading-relaxed text-ink/60">
+        <p className="mt-10 font-label font-normal tracking-normal text-sm leading-relaxed text-ink/60">
           Bookmark this URL for later:{" "}
           <code className="rounded bg-moss/10 px-2 py-0.5 font-label text-xs text-moss">
             /admin
