@@ -53,10 +53,7 @@ export const galleryAlbums: GalleryAlbum[] = [
     id: "buenos",
     title: "The Buenos",
     photographer: "Under the Sun Photography",
-    images: Array.from({ length: 13 }, (_, i) => ({
-      src: buenos(i + 1),
-      alt: "The Buenos celebration",
-    })),
+    images: albumImages(buenos, 13, 12, "The Buenos celebration"),
   },
   {
     id: "munizes",
