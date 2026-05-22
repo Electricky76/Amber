@@ -8,10 +8,11 @@ import Link from "next/link";
 export function Hero() {
   return (
     <section
-      className="flex min-h-svh w-full flex-col bg-standout-2 pt-16 md:pt-[4.5rem]"
+      className="relative min-h-svh w-full bg-standout-2"
       aria-labelledby="hero-heading"
     >
-      <div className="relative flex min-h-0 flex-1 flex-col">
+      {/* Photo from top of screen; fixed header sits on top (no brown gap below bar) */}
+      <div className="absolute inset-0">
         <Image
           src="/images/amber-hero-1J1A9873.jpg"
           alt="Amber Morrill — boutique event planning"
@@ -24,8 +25,9 @@ export function Hero() {
           className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/50"
           aria-hidden
         />
+      </div>
 
-        <div className="relative z-10 flex min-h-0 flex-1 flex-col items-center justify-end px-5 pb-10 pt-6 text-center text-offwhite md:px-10 md:pb-14 md:pt-8">
+      <div className="relative z-10 flex min-h-svh flex-col items-center justify-end px-5 pb-10 text-center text-offwhite md:px-10 md:pb-14">
           <div className="mx-auto flex w-full max-w-xl shrink-0 flex-col items-center px-2 pb-2">
             <h1
               id="hero-heading"
@@ -42,7 +44,6 @@ export function Hero() {
             </Link>
           </div>
         </div>
-      </div>
     </section>
   );
 }
