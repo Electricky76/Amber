@@ -25,21 +25,15 @@ export function Hero() {
           aria-hidden
         />
 
-        <div className="relative z-10 flex min-h-0 flex-1 flex-col items-center px-5 pb-10 pt-6 text-center text-offwhite md:px-10 md:pb-14 md:pt-8">
-          <h1
-            id="hero-heading"
-            className="font-label shrink-0 text-xs font-semibold uppercase tracking-[0.34em] text-offwhite [text-shadow:0_2px_20px_rgba(0,0,0,0.55)] md:text-[13px] md:tracking-[0.36em]"
-          >
-            Texas &amp; beyond
-          </h1>
-
-          <div className="min-h-[min(24vh,180px)] w-full flex-1 md:min-h-[min(28vh,240px)]" />
-
+        <div className="relative z-10 flex min-h-0 flex-1 flex-col items-center justify-end px-5 pb-10 pt-6 text-center text-offwhite md:px-10 md:pb-14 md:pt-8">
           <div className="mx-auto flex w-full max-w-xl shrink-0 flex-col items-center px-2 pb-2">
-            <p className="font-label text-sm font-normal leading-relaxed tracking-normal text-offwhite [text-shadow:0_2px_18px_rgba(0,0,0,0.6)] md:text-base">
+            <h1
+              id="hero-heading"
+              className="font-label text-sm font-normal leading-relaxed tracking-normal text-offwhite [text-shadow:0_2px_18px_rgba(0,0,0,0.6)] md:text-base"
+            >
               Boutique event planning that blends elegance, personality, and
               seamless execution—so you can be fully present in every moment.
-            </p>
+            </h1>
             <Link
               href="#services"
               className="font-label mt-6 inline-flex items-center justify-center rounded-full bg-dark-mauve px-10 py-3.5 text-xs font-semibold uppercase tracking-[0.28em] text-offwhite shadow-lg transition hover:bg-blush hover:text-ink md:mt-8 md:px-12 md:py-4"
